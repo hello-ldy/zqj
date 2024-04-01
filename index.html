@@ -1,190 +1,153 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>homework</title>
-    <link
-      href="fontawesome-free/css/all.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet" />
-    <script src="js/sb-admin-2.min.js"></script>
-  </head>
-  <body>
-    <div id="content-wrapper" class="d-flex flex-column">
-      <!-- Main Content -->
-      <div id="content">
-        <!-- Topbar -->
-        <nav
-          class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"
-        >
-          <!-- Sidebar Toggle (Topbar) -->
-          <button
-            id="sidebarToggleTop"
-            class="btn btn-link d-md-none rounded-circle mr-3"
-          >
-            <i class="fa fa-bars"></i>
-          </button>
-          <!-- Topbar Search -->
-          <h1 class="h1 mb-0 text-gray-800">
-            <a class="text-gray-800">结果展示</a>
-          </h1>
-          <!-- Topbar Navbar -->
-        </nav>
-        <!-- End of Topbar -->
-        <div class="container-fluid">
-          <div class="row align-items-center justify-content-around">
-            <!-- 各平台指纹数量分布 card -->
-            <div class="col-md-12">
-              <div class="card mb-4 shadow py-0">
-                <div class="card-header py-3">
-                  <h4 class="m-0 font-weight-bold text-primary">
-                    <em class="fas fa-fw fa-chart-bar"></em>
-                    各省三月住宅销售增长情况
-                  </h4>
-                </div>
+CNVD公开漏洞批量报送格式填写说明
+(适用于成员单位账号)
+本次修改只是针对字段的删减和注意的事项，每个字段的规范没有变化。 
+说明：*号表示必填项，即非空
+*1、漏洞名称
+格式内容：厂商+产品+漏洞类型（若产品和漏洞类型均一致，则需要通过漏洞点来区分（如不同的注入点），若漏洞点也一致则视为同一漏洞，不再重复收录。）
+示例：
+1）	Foreman HTML注入漏洞
+2）	Joomla Ja-K2-Filter-And-Search组件SQL注入漏洞
+3）	doyocms系统source/ajax.php文件world参数SQL注入漏洞
+4）	doyocms系统source/ajax.php文件molds参数SQL注入漏洞
 
-                <div
-                  id="container1"
-                ></div>
-              </div>
-              <!-- card-->
-            </div>
-            <!--col-->
+需要注意的是：
+1、漏洞名称中不能直接写“安全漏洞”要写出具体存在的漏洞，比如“IBM Rational DOORS Next Generation拒绝服务漏洞、IBM Rational DOORS Next Generation跨站脚本漏洞”等；
+2、漏洞名称是“多个漏洞、未明漏洞”在“多个、未明的前面”要加“存在”两个字。比如: IBM Rational DOORS Next Generation存在多个拒绝服务漏洞、IBM Rational DOORS Next Generation存在未明漏洞；
+3、如果漏洞名称是“内存损坏漏洞”统一写成“内存破坏漏洞”。比如：IBM Rational DOORS Next Generation内存损坏漏洞 改为“IBM Rational DOORS Next Generation内存破坏漏洞”；如果漏洞漏洞名称是：“释放后重用漏洞”统一写成“内存错误引用漏洞”，比如：IBM Rational DOORS Next Generation存在释放后重用漏洞改为“IBM Rational DOORS Next Generation存在内存错误引用漏洞”；
+4、漏洞名称是“基于栈的缓冲区溢出漏洞、基于堆栈的缓冲区溢出漏洞”都要把“基于和的”去掉，写成：“栈缓冲区溢出漏洞、堆栈缓冲区溢出漏洞”；
+5、漏洞名称中的中文和英文之间不需要有空格。比如：IBM Rational DOORS Next Generation 拒绝服务漏洞，Generation和拒绝服务漏洞不需要空格。
 
-            <div class="col-12">
-              <div class="card mb-4 shadow py-0">
-                <div class="card-header py-3">
-                  <h4 class="m-0 font-weight-bold text-primary">
-                    <em class="fas fa-fw fa-chart-bar"></em> 江苏省住宅销售增长情况
-                  </h4>
-                </div>
+*2、漏洞中文描述	
+格式内容：共2段内容，产品介绍+漏洞细节+攻击者可以利用漏洞（危害）……
+	产品介绍（单独写一段）：1-2句话概括产品功能、用途等。如：XXX是一款轻量级的JavaScript解释器；XXX是一款企业级CMS系统，提供XXX功能……
+	漏洞细节：描述存在的漏洞、版本、产生的原因等。如：XXX存在XXX漏洞，该漏洞产生的原因是……；XXX2.0及之前版本中的AAA文件中的BBB参数存在XXX漏洞，该漏洞源于……
+	攻击者可以利用漏洞（危害）：这部分主要描述利用手段及漏洞危害。如：攻击者可该利用漏洞，发起拒绝服务攻击/获取敏感信息/执行任意代码……；攻击者可以利用漏洞，通过构造特殊字符触发堆溢出，导致拒绝服务……
 
-                <div
-                  id="container2"
-                ></div>
-              </div>
-              <!-- card-->
-            </div>
-          </div>
-        </div>
-        <!-- Footer -->
-        <footer class="sticky-footer bg-white">
-          <div class="container my-auto">
-            <div class="copyright text-center my-auto">
-              <span>Copyright © 江南大学 JiangNan University</span>
-              <span>
-                <script type="text/javascript">
-                  var date = new Date();
-                  document.write(date.getFullYear());
-                </script>
-              </span>
-            </div>
-          </div>
-        </footer>
-        <!-- End of Footer -->
-      </div>
-    </div>
-  </body>
-<script src="highcharts/highcharts.js"></script>
-<script src="highcharts/highcharts-more.js"></script>
-<script src="highcharts/solid-gauge.js"></script>
-<script src="highcharts/exporting.js"></script>
-<script src="highcharts/export-data.js"></script>
-<script src="highcharts/accessibility.js"></script>
-<script src="highcharts/highcharts-3d.js"></script>
-<script>
-  var chart1 = Highcharts.chart('container1',{
-    chart: {
-        type: 'column',
-       
-    },
-    title: {
-        text: '各省三月住宅销售增长情况'
-    },
-    xAxis: {
-        categories: ['北京市', '天津市', '河北省', '辽宁省', '上海市', '江苏省', '浙江省', '福建省', '山东省', '广东省', '海南省', '山西省', '吉林省', '黑龙江省', '安徽省', '江西省', '河南省',
-         '湖北省', '湖南省', '内蒙古自治区', '广西壮族自治区', '重庆市', '四川省', '贵州省', '云南省', '西藏自治区', '陕西省', '甘肃省', '青海省', '宁夏回族自治区', '新疆维吾尔自治区'],
-        crosshair: true
-    },
-    yAxis: {
-        min: 0,
-        title: {
-            text: '面积(万平方米)'
-        }
-    },
-    tooltip: {
-        // head + 每个 point + footer 拼接成完整的 table
-        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-        '<td style="padding:0"><b>{point.y:.2f} mm</b></td></tr>',
-        footerFormat: '</table>',
-        shared: true,
-        useHTML: true
-    },
-    plotOptions: {
-        column: {
-            borderWidth: 0
-        }
-    },
-    series: [{
-        name: '商品房销售面积',
-        data: [218.6, 329.05, 874.49, 487.62, 391.6, 2355.27, 1705.93, 1346.11, 2414.29, 2624.91, 178.57, 439.75, 201.62, 167.17, 
-        1583.03, 1104.98, 2364.24, 1339.87, 1493.78, 319.03, 1119.35, 1080.17, 2361.44, 1080.85, 712.39, 11.09, 649.3, 362.01, 52.19, 169.85, 407.18]
-    }, {
-        name: '现房',
-        data: [90.36, 118.73, 95.99, 143.2, 113.74, 553.95, 281.07, 280.86, 426.07, 676.72, 72.95, 44.01, 59.99, 70.99, 271.6, 167.57, 345.03, 320.63,
-         216.98, 84.91, 262.42, 366.85, 310.51, 175.0, 190.02, 4.83, 90.28, 67.74, 6.18, 24.48, 74.05]
-    }, {
-        name: '期房',
-        data: [128.24, 210.32, 778.5, 344.41, 277.86, 1801.32, 1424.86, 1065.25, 1988.22, 1948.18, 105.62, 395.74, 141.64, 96.18, 1311.43, 937.42, 2019.21, 
-        1019.24, 1276.8, 234.12, 856.93, 713.31, 2050.93, 905.86, 522.37, 6.27, 559.01, 294.27, 46.0, 145.36, 333.13]
-    }]
-});
+攻击者可利用该漏洞/攻击者可利用漏洞/允许攻击者/攻击者可通过/攻击可借助……
 
-var chart2 = Highcharts.chart('container2', {
-    chart: {
-        type: 'line'
-    },
-    title: {
-        text: '江苏省住宅销售增长情况'
-    },
-    xAxis: {
-        categories: ['202205', '202206', '202207', '202208', '202209', '202210', '202211', '202212', '202302', '202303', '202304']
-    },
-    yAxis: {
-        title: {
-            text: '面积(万平方米)'
-        }
-    },
-    plotOptions: {
-        line: {
-            dataLabels: {
-                enabled: true          
-            },
-            enableMouseTracking: false
-        }
-    },
-    series: [{
-        name: '商品房销售面积',
-        data: [3922.49, 5428.69, 6261.19, 7168.5, 8544.37, 9493.72, 10543.63, 12115.15, 1215.22, 2355.27, 3048.76]
-    }, {
-        name: '现房',
-        data: [943.1, 1301.42, 1507.68, 1700.16, 1906.0, 2143.38, 2353.64, 2702.09, 271.68, 553.95, 718.29]
-    },{
-        name: '期房',
-        data: [2979.39, 4127.27, 4753.51, 5468.34, 6638.37, 7350.34, 8190.0, 9413.07, 943.54, 1801.32, 2330.47]
-    }]
-});
 
-</script>
-</html>
+示例：
+1）
+DokuWiki是德国软件开发者Andreas Gohr所研发的一款基于PHP的Wiki引擎，它主要用于中小团队和个人网站知识库的管理，并提供版本控制、全文检索和权限控制等功能。
+
+DokuWiki 2016-06-26a及之前的版本中的/inc/HTTPClient.php文件中的HTTPClient Class中的‘sendRequest’方法存在跨站请求伪造漏洞，该漏洞源于程序未能限制对专用网络的访问。攻击者可通过SSRF利用该漏洞扫描内部网络端口，例如：10.0.0.1/8，172.16.0.0/12，192.168.0.0/16。
+2）
+Freefloat FTP Server是瑞典Freefloat公司的一套免费的用于上传文件和管理有线及无线设备的软件。 
+
+FreeFloat FTP Server 1.0版本中存在缓冲区溢出漏洞。远程攻击者可借助RMD命令中的长字符串利用该漏洞执行任意代码。
+
+需要注意的是：
+1、	如果漏洞描述中是“XXX产品/系统存在内存损坏漏洞”统一写成“XXX产品/系统存在内存破坏漏洞”。比如：IBM Rational DOORS Next Generation存在内存损坏漏洞 改为“IBM Rational DOORS Next Generation存在内存破坏漏洞”；如果漏洞描述中是：“XXX产品/系统存在释放后重用漏洞”统一写成“XXX产品/系统存在内存错误引用漏洞”，比如：IBM Rational DOORS Next Generation存在释放后重用漏洞改为“IBM Rational DOORS Next Generation存在内存错误引用漏洞”。
+2、	漏洞描述是“IBM Rational DOORS Next Generation基于栈的缓冲区溢出漏洞或基于堆栈的缓冲区溢出漏洞”都要把“基于和的”去掉，写成：“IBM Rational DOORS Next Generation栈缓冲区溢出漏洞或堆栈缓冲区溢出漏洞”；
+3、 
+
+3、CVE编号(选填)	
+格式内容：CVE-XXXX-XXXX
+示例：
+CVE-2018-9999
+
+4、Bugraq ID(选填)	
+格式内容：一般是五位数字
+示例：
+55555
+*5、漏洞影响对象类型类型
+格式内容：填写漏洞影响的产品类型，目前CNVD将产品类型分为七项：操作系统/应用程序/WEB应用/数据库/网络设备（交换机、路由器等网络端设备）/安全产品/智能设备（物联网终端设备）漏洞
+示例：
+漏洞影响的产品是WordPress对应的漏洞影响对象类型：WEB应用
+漏洞影响的产品是Word 2007对应的漏洞影响对象类型：应用程序
+漏洞影响的产品是FirePOWER Management Center对应的漏洞影响对象类型：安全产品
+漏洞影响的产品是Windows 8.1对应的漏洞影响对象类型：操作系统
+漏洞影响的产品是MySQL Server对应的漏洞影响对象类型：数据库
+……
+*6、厂商
+注：厂商英文名称书写参考官网域名，以短字段为准，如微软厂商书写成:Microsoft，而不是：Microsoft Corporation
+1、不同厂商区分用##号，如：厂商：A、B、C，则写成：A##B##CC
+2、报送过程中厂商名称及书写格式保持一致
+*7、产品	
+注：产品和上述厂商书写顺序均一致，若厂商顺序A、B、C，则产品顺序：A产品、B产品、C产品；遇到缩写的产品，建议全程和简写一并附上，如：Access Control System（ACS）
+1、不同厂商不同产品之间用##号，如：厂商：A##B##CC；产品：A1##B1##C1
+2、同一厂商不同产品之间用“###”，如A厂商A、AA、AAA产品，则写成：A1###A2###A3
+8、版本号
+注：版本号和上述厂商、产品书写顺序均一致，若厂商顺序A、B、C，则产品顺序：A产品、B产品、C产品，版本号顺序：A产品版本号、B产品版本号、C产品版本号
+书写规范参考：
+1、漏洞影响产品处，版本号相关英文按照英文词组的意思替换成对应的数学符号，例如（供参考，以实际释义为准）：
+befor、previous、prior对应“<”，and previous对应“<=”，after对应“>”，through对应“>=，<=”；and earlier对应“<=”；无版本号用“无”；
+2、同一厂商同一产品的不同版本之间用||区分，如影响A产品的A1、A2、A3版本，则写成：A1||A2||A3
+3、不同厂商不同产品的版本之间区分用##号，如：影响A、B、C产品对应的A1、B1、C1版本，则写成：A1##B1##C1
+4、若版本号是区间，则采用中文逗号“，”，如该漏洞影响A产品的1.2和and after1.5 ，before 2.1，影响则版本号写成1.2||>1.5，<2.1
+5、若X表示变量，版本号用*号代替，如：影响2.7之前的2.x版本，则版本号写成：2.*，<2.7
+6、同一厂商不同产品之间版本号之间用“###”，如A厂商A、AA、AAA产品，A产品版本A1、A2、A3，版本号写成：A1||A2||A3###无###无。如影响A厂商的A、AA、AAA产品及A产品的A1、A2、A3版本，B厂商的B产品B1版本，C厂商的C产品C1版本、CC产品的after CC1and befor CC2，
+则版本号写成：A1||A2||A3###无###无##B1##C1###>CC1;<CC2
+
+*9、最早公开时间	
+格式内容：即漏洞的发现时间，年-月-日（XX）-（XX）-（XX）
+示例：2019/6/18
+
+*10、安全建议
+格式内容：
+1）	若有修复方案，则按照如下方式填写：
+厂商已发布了漏洞修复程序，请及时关注更新（或目前厂商已经发布了升级补丁以修复这个安全问题，请到厂商的主页下载）：
+http://www.XXX.com/../..(修复链接或厂商官网)
+2）若没有修复方案，则按照如下方式填写：
+厂商尚未提供漏洞修复方案，请关注厂商主页更新（或目前没有详细的解决方案提供）：
+http://www.XXX.com/（厂商官网）
+示例：
+1）	有修复方案：
+目前厂商已经发布了升级补丁以修复这个安全问题，请到厂商的主页下载： 
+http://www.huawei.com/en/psirt/security-advisories/huawei-sa-20160716-01-smartphone-en
+2）	无修复方案：
+目前没有详细的解决方案提供： 
+https://www.sierrawireless.com/
+
+*11、原始信息来源
+格式内容：填写漏洞来源的原始链接，http://www.XXX.com/../..
+示例：
+https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-XXXX-XXXX
+
+12、补丁链接
+格式内容：漏洞升级或修复的URL，即上述10、安全建议处的链接，http://www.XXX.com/../..
+示例：
+http://www.huawei.com/en/psirt/security-advisories/huawei-sa-20160716-01-smartphone-en
+
+需要注意的是：此部分内容与《安全建议》相对应，如果漏洞已更新补丁，此次至填写安全建议处的链接，如果是未更新补丁（目前没有详细的解决方案提供），则此处不需要填写。
+
+13、验证POC
+格式内容：POC或EXP内容，且非文件上传形式，文本形式
+示例：
+ftp_ip = raw_input("FTP server IP:") killerstring = 'A' * 500 ftp = FTP('127.0.0.1') ftp.login('anonymous', 'h4ck3r@h4ck3r.net') print ftp.login print "SERVER KILLED" FTP.mkd(ftp, killerstring) 
+14、验证信息参考链接
+格式内容：该漏洞的POC或EXP的URL，http://www.XXX.com/../..
+
+
+从15-20是对漏洞的CVSS评分
+
+*15、攻击途径
+格式内容：漏洞的利用攻击方式，包括：本地、远程网络
+示例：
+需要通过互联网进行远程攻击则写“远程网络”
+既可通过互联网进行远程攻击，又可通过本地进行的攻击，则写“远程网络”
+*16、攻击复杂度	
+格式内容：漏洞利用难易程度，包括：高、中、低三项
+示例：
+对攻击条件要求较高，漏洞较复杂且成功几率很小则写“高”
+*17、认证前提	
+格式内容：漏洞发起攻击前是否需要认证，即复现环节需要身份等认证的，包括：
+不需要认证、一次、多次
+示例：
+登陆后才能发起的跨站脚本漏洞，则认证处填写“一次”
+*18、机密性
+格式内容：漏洞影响的信息泄露的程度，包括：不受影响、部分地、完全地
+示例：
+该漏洞导致整个系统的数据泄露，则机密性，填写“完全地”
+*19、完整性	
+格式内容：漏洞影响的信息完整程度，包括：不受影响、部分地、完全地
+示例：
+该漏洞导致可操作整个系统的数据，如修改、删除，则可用性填写“完全地”
+*20、可用性
+格式内容：漏洞影响的信息泄露的程度，包括：不受影响、部分地、完全地
+示例：
+该漏洞导致整个系统瘫痪宕机，则可用性填写“完全地”
+
+可参看NVD网站评分：https://nvd.nist.gov/vuln/detail/CVE-2017-10873
+ 
+
